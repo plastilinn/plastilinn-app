@@ -439,6 +439,10 @@ height: 1.5em;
 margin: 0px auto; /* Añade margen arriba y abajo y centra horizontalmente */
 }
 
+.btn-primary {
+@apply dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12;
+}
+
 .btn-primary:hover {
 background-color: #2563eb; /* Un azul más brillante */
 }
