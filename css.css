@@ -1,0 +1,592 @@
+* {
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: Inter var, ui-sans-serif, system-ui, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 90%; /* Reduce el tamaño de fuente base del documento */
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.material-symbols-outlined {
+    background-color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 0.8em;
+    /* Reduce el tamaño de los encabezados en un 20% relativo al tamaño base */
+    font-family: 'Inter var', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+    background-color: whitesmoke;
+    /* Establece el color de fondo a whitesmoke */
+    border-radius: 4px;
+    /* Establece los bordes redondeados */
+    padding: 2px;
+    /* Añade algo de padding para que el fondo tenga espacio alrededor del texto */
+    display: inline-block;
+    /* Asegura que el fondo solo cubra el texto */
+    margin: 4px 4px;
+    /* Añade margen superior e inferior para separar los encabezados */
+    width: auto;
+    /* Asegura que el ancho del encabezado se ajuste al contenido */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho total del elemento */
+}
+
+.metadata-container button,
+.metadata-container span {
+    height: 1.2rem;
+    min-height: 2rem;
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+
+.highlight-text {
+    background-color: blue;
+    color: white;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+.noto-color emoji-regular {
+    font-family: "Noto Color Emoji", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+br {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    /* Ajusta el espacio superior */
+    margin-bottom: 10px;
+    /* Ajusta el espacio inferior */
+}
+
+/* Personaliza la barra de desplazamiento */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    /* Controla el ancho de la barra de desplazamiento */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Color de fondo de la pista de la barra de desplazamiento */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Color del control deslizante de la barra de desplazamiento */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Color del control deslizante de la barra de desplazamiento al pasar el mouse */
+}
+
+a {
+    color: blue !important;
+}
+
+.md-block {
+    display: flex;
+    /* o display: grid; dependiendo de tu estructura */
+    gap: 10px;
+    /* Ajusta este valor según lo necesites */
+}
+
+.md-block-container-middle>div {
+    /* Tus estilos aquí */
+    border-bottom: 1px solid #F5F5F5;
+    padding: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.toastui-editor-defaultUI div[contenteditable="true"] {
+    text-align: left;
+}
+
+#bp-web-widget-container {
+    width: 50%;
+    height: 80%;
+    z-index: 100;
+    position: relative;
+}
+
+.section {
+    scroll-margin-top: 2rem;
+    /* Asegúrate de que esto sea igual o más grande que la altura de tu navbar */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.index ul li a {
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+
+#sidebar {
+    position: -webkit-sticky;
+    /* Para soporte en Safari */
+    position: sticky;
+    top: 0;
+    /* Ajusta este valor según sea necesario para tu diseño */
+    z-index: 10;
+    /* Asegúrate de que tiene un z-index alto si hay otros elementos flotantes */
+}
+
+@keyframes highlightFade {
+    from {
+        background-color: blue;
+    }
+
+    to {
+        background-color: transparent;
+        /* Asume que el color de fondo original es transparente */
+    }
+}
+
+.highlight {
+    animation: highlightFade 3s ease forwards;
+}
+
+#top-container {
+    position: -webkit-sticky;
+    /* Para soporte en Safari */
+    position: sticky;
+    top: 0;
+    /* Este valor se ajusta para que se quede fijo en la parte superior cuando hagas scroll */
+    z-index: 10;
+    /* Asegúrate de que tiene un z-index alto si hay otros elementos flotantes */
+}
+
+#sidebar {
+    flex-shrink: 0;
+    /* Esto evita que la sidebar se encoja si hay mucho contenido */
+}
+
+.marker {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+p {
+    color: #4a5568;
+    /* Gris oscuro */
+    font-size: 1rem;
+    /* Tamaño de letra */
+    line-height: 1.2;
+    /* Espacio de interlineado compacto */
+    margin-bottom: 0.5rem;
+    /* Espacio después del párrafo para separarlo del siguiente elemento */
+}
+
+
+.bpw-message-big-container code {
+    background-color: #f0f0f0;
+    /* Cambia el color de fondo */
+    padding: 5px;
+    /* Agrega padding */
+    border-radius: 4px;
+    /* Redondea los bordes */
+    white-space: pre-wrap;
+    /* Asegura que el contenido se envuelva correctamente */
+    word-wrap: break-word;
+    /* Permite la ruptura de palabras para evitar el desbordamiento horizontal */
+    max-width: 100%;
+    /* Limita el ancho máximo para prevenir desbordamiento fuera del contenedor */
+}
+
+/* Estilos de Tailwind estáticos */
+
+/* Estilos generales para simular Tailwind CSS */
+body, h1, h2, h3, h4, h5, h6, p, li, button, input, select, textarea {
+    font-family: 'Inter', sans-serif;
+    color: #4B5563; /* Color de texto gris oscuro */
+  }
+  
+  /* Botones */
+  button {
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #E5E7EB; /* Gris claro */
+  }
+  
+  th {
+    background-color: #F9FAFB; /* Gris muy claro */
+  }
+  
+  /* Listas */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Encabezados */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+  
+  h1 {
+    font-size: 2.25rem; /* 36px */
+  }
+  
+  h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  h3 {
+    font-size: 1.25rem; /* 20px */
+  }
+  
+  /* Inputs y Textareas */
+  textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #E5E7EB; /* Gris claro */
+    border-radius: 0.375rem; /* 6px */
+  }
+  
+textarea:focus, select:focus {
+    outline: 2px solid #3B82F6; /* Azul */
+  }
+
+/* Final de estilos de tailwind estáticos */
+
+.line-container {
+    display: grid;
+    align-items: start; /* Alineación de elementos */
+    margin-bottom: 4px;
+    border: gainsboro 1px;
+}
+
+.custom-flex-1 {
+    flex: 0 0 20%;
+}
+
+.custom-flex-3 {
+    flex: 0 0 20%;
+}
+
+.custom-flex-2 {
+    flex: 0 0 60%;
+    background-color: white; /* Fondo blanco para la columna */
+    padding: 0; /* Eliminar padding interno si existe */
+}
+
+.md-line-content {
+    background-color: white; /* Asegurar que el fondo de cada elemento de contenido también sea blanco */
+    border: 0; /* Eliminar bordes o hacerlos blancos */
+    box-shadow: none; /* Eliminar sombras internas para evitar interrupciones en la continuidad */
+}
+
+.md-line-wrapper {
+    margin: 0; /* Eliminar margen entre elementos de línea si es necesario */
+    padding: 0; /* Ajustar el padding para eliminar espacios entre elementos */
+}
+
+/* Eliminar bordes y espaciados entre elementos de contenido */
+.md-line {
+    padding: 0; /* Ajustar según sea necesario para alinear elementos sin espacios */
+}
+
+.tags-container {
+    /* Asegura que el contenido esté alineado a la izquierda */
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Alinea los ítems al inicio del contenedor */
+    justify-content: flex-start; /* Alinea los ítems al inicio (izquierda) */
+    gap: 4px; /* Espacio entre etiquetas */
+}
+
+textarea {
+    min-height: 1em;
+    max-height: 400px;
+    overflow-y: hidden;
+    resize: vertical; /* Permite ajustar la altura */
+    border: 1px solid #dcdcdc; /* Borde gris clarito */
+    padding: 2px; /* Espaciado interno para el texto */
+}
+
+/* Estilos para textarea */
+.markdown-display {
+    outline: none; /* Elimina el outline para evitar el aspecto predeterminado al enfocar */
+    transition: border-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.markdown-display:hover,
+.markdown-display:focus {
+    border-color: #007bff; /* Cambia el color del borde a azul al pasar el cursor o enfocar */
+}
+
+a {
+    text-decoration: none !important;
+}
+
+code {
+    white-space: pre-wrap;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: revert; /* Esto restablecerá el tamaño de fuente al valor predeterminado del navegador */
+    font-weight: bold; /* Esto hará que los encabezados sean más gruesos */
+}
+
+
+h1 {
+    font-size: 2.5em !important; /* Ajusta según necesites */
+    font-weight: bold !important;
+}
+
+h2 {
+    font-size: 2em !important; /* Ya tienes este */
+    font-weight: bold !important;
+}
+
+h3 {
+    font-size: 1.75em !important; /* Ajusta según necesites */
+    font-weight: bold !important;
+}
+
+h4 {
+    font-size: 1.5em !important; /* Ajusta según necesites */
+    font-weight: bold !important;
+}
+
+h5 {
+    font-size: 1.25em !important; /* Ajusta según necesites */
+    font-weight: bold !important;
+}
+
+h6 {
+    font-size: 1em !important; /* Ajusta según necesites, igual a tamaño de texto normal */
+    font-weight: bold !important;
+}
+
+.hidden {
+    display: none;
+}
+
+#model-title {
+    padding-top: 40px;
+    /* Ajusta este valor según la altura de tus elementos fijos */
+}
+
+.flex.space-x-3 {
+    display: flex;
+    justify-content: center;
+}
+
+.md-line-content {
+    width: 100%; /* Hace que el textarea ocupe el 100% del ancho de su contenedor */
+    min-height: 2em; /* Establece la altura mínima para mostrar dos líneas de texto */
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en la altura y anchura total */
+    resize: vertical; /* Permite al usuario redimensionar el textarea solo verticalmente */
+}
+
+.ai-magic-button {
+display: block; /* Hace que el botón ocupe su propia línea */
+width: auto; /* O cualquier ancho específico que desees */
+min-height: 1em !important;
+height: 1.5em;
+margin: 0px auto; /* Añade margen arriba y abajo y centra horizontalmente */
+}
+
+.btn-primary:hover {
+background-color: #2563eb; /* Un azul más brillante */
+}
+
+/* Mejoras en Inputs */
+.input, .select {
+transition: border-color 0.3s ease;
+border-radius: 0.5rem;
+}
+
+.input:focus, .select:focus {
+border-color: #4f46e5; /* Cambia el color del borde al enfocar */
+box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.5); /* Sombra suave alrededor */
+}
+
+.md-block-content ul {
+    padding-left: 10px;
+}
+
+span[data-tag] {
+    position: relative;
+    border-radius: 4px;
+    font-size: 1rem !important;
+}
+
+span[data-tag]::before {
+    content: "⚪"; /* Emoji por defecto */
+    left: 0;
+}
+
+span[data-tag="key"] { background-color: #FFCCCC; } span[data-tag="key"]::before { content: "🔑";}
+span[data-tag="organization"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="organization"]::before { content: "🏢";}
+span[data-tag="journey"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="journey"]::before { content: "✈️";}
+span[data-tag="solution"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="solution"]::before { content: "💊";}
+span[data-tag="offering"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="offering"]::before { content: "🛍️";}
+span[data-tag="work"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="work"]::before { content: "⚙️";}
+span[data-tag="metric"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="metric"]::before { content: "📐";}
+span[data-tag="asset"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="asset"]::before { content: "⭐";}
+span[data-tag="revenue"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="revenue"]::before { content: "💰";}
+span[data-tag="segmentation"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="segmentation"]::before { content: "✂️";}
+span[data-tag="segment"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="segment"]::before { content: "🙋";}
+span[data-tag="value"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="value"]::before { content: "💎";}
+span[data-tag="channel"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="channel"]::before { content: "🎙️";}
+span[data-tag="cost"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="cost"]::before { content: "💸";}
+span[data-tag="emotion"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="emotion"]::before { content: "😐";}
+span[data-tag="message"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="message"]::before { content: "📣";}
+span[data-tag="feature"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="feature"]::before { content: "🌟";}
+span[data-tag="function"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="function"]::before { content: "👔";}
+span[data-tag="goal"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="goal"]::before { content: "🎯";}
+span[data-tag="profile_goal"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="profile_goal"]::before { content: "🎯";}
+span[data-tag="hypothesis"] { background-color: #FFCCCC; } span[data-tag="hypothesis"]::before { content: "🔎";}
+span[data-tag="person"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="person"]::before { content: "👤";}
+span[data-tag="transaction"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="transaction"]::before { content: "🛒";}
+span[data-tag="experiment"] { background-color: #90EE90; } span[data-tag="experiment"]::before { content: "🧪";}
+span[data-tag="question"] { background-color: #FFCCCC; } span[data-tag="question"]::before { content: "💭";}
+span[data-tag="insight"] { background-color: #90EE90; } span[data-tag="insight"]::before { content: "💡";}
+span[data-tag="position"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="position"]::before { content: "🪪";}
+span[data-tag="skill"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="skill"]::before { content: "🔧";}
+span[data-tag="phase"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="phase"]::before { content: "🗓️";}
+span[data-tag="milestone"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="milestone"]::before { content: "🏁";}
+span[data-tag="organization_value"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="organization_value"]::before { content: "🧠";}
+span[data-tag="role"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="role"]::before { content: "🎩";}
+span[data-tag="stakeholder"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="stakeholder"]::before { content: "🤔";}
+span[data-tag="persona"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="persona"]::before { content: "👩‍💼";}
+span[data-tag="profile"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="profile"]::before { content: "🙎‍♂️";}
+span[data-tag="relationship"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="relationship"]::before { content: "🤝";}
+span[data-tag="challenge"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="challenge"]::before { content: "🏆";}
+span[data-tag="compensation"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="compensation"]::before { content: "💸";}
+span[data-tag="contribution"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="contribution"]::before { content: "💵";}
+span[data-tag="competitor"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="competitor"]::before { content: "🏅";}
+span[data-tag="partner"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="partner"]::before { content: "👥";}
+span[data-tag="perception"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="perception"]::before { content: "👁️";}
+span[data-tag="price"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="price"]::before { content: "💲";}
+span[data-tag="profile_goal"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="profile_goal"]::before { content: "🎯";}
+span[data-tag="roadmap"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="roadmap"]::before { content: "🗺️";}
+span[data-tag="funding_source"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="funding_source"]::before { content: "💵";}
+span[data-tag="funnel"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="funnel"]::before { content: "🔽";}
+span[data-tag="inspiration"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="inspiration"]::before { content: "🦋";}
+span[data-tag="legal_issue"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="legal_issue"]::before { content: "📜";}
+span[data-tag="organization_value"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="organization_value"]::before { content: "🌟";}
+span[data-tag="trend"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="trend"]::before { content: "📈";}
+span[data-tag="topic"] { background-color: lightgrey; } span[data-tag="topic"]::before { content: "🗄️";}
+span[data-tag="resource"] { background-color: lightgrey; } span[data-tag="resource"]::before { content: "🖥️";}
+span[data-tag="unit"] { background-color: lightgrey; } span[data-tag="unit"]::before { content: "📓";}
+span[data-tag="content"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="content"]::before { content: "📘";}
+span[data-tag="AI"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="AI"]::before { content: "🤖";}
+span[data-tag="help"] { background-color: lightgrey; } span[data-tag="help"]::before { content: "🌐";}
+span[data-tag="block"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="block"]::before { content: "🧿";}
+span[data-tag="assumption"] { background-color: #FFCCCC; } span[data-tag="assumption"]::before { content: "🔮";}
+span[data-tag="comment"] { background-color: lightgrey; } span[data-tag="comment"]::before { content: "🗨️";}
+span[data-tag="task"] { background-color: rgba(191,219,254,var(--tw-bg-opacity)) !important; } span[data-tag="task"]::before { content: "🛠️";}
+span[data-tag="risk"] { background-color: #FFCCCC; } span[data-tag="risk"]::before { content: "🚨";}
+
+
+span[data-marker] {
+    line-height: 1.4rem;
+    position: relative;
+    font-size: 0 !important;
+    pointer-events: none;
+    display: inline-block;
+    padding: 4px !important;
+    text-align: center;
+}
+
+span[data-marker]::before {
+    line-height: 1.4rem;
+    content: var(--emoji);
+    font-size: 1rem;
+    opacity: var(--opacity);
+    background-color: whitesmoke;
+}
+
+span[data-marker="\002A"]::before { --emoji: "⭐1"; --opacity: 0.2; }
+span[data-marker="\002A\002A"]::before { --emoji: "⭐2"; --opacity: 0.4; }
+span[data-marker="\002A\002A\002A"]::before { --emoji: "⭐3"; --opacity: 0.6; }
+span[data-marker="\002A\002A\002A\002A"]::before { --emoji: "⭐4"; --opacity: 0.8; }
+span[data-marker="\002A\002A\002A\002A\002A"]::before { --emoji: "⭐5"; --opacity: 1; }
+span[data-marker="\003E"]::before { --emoji: "✔️1"; --opacity: 0.2; }
+span[data-marker="\003E\003E"]::before { --emoji: "✔️2"; --opacity: 0.4; }
+span[data-marker="\003E\003E\003E"]::before { --emoji: "✔️3"; --opacity: 0.6; }
+span[data-marker="\003E\003E\003E\003E"]::before { --emoji: "✔️4"; --opacity: 0.8; }
+span[data-marker="\003E\003E\003E\003E\003E"]::before { --emoji: "✔️5"; --opacity: 1; }
+span[data-marker="\0021"]::before { --emoji: "🚩1"; --opacity: 0.2; }
+span[data-marker="\0021\0021"]::before { --emoji: "🚩2"; --opacity: 0.4; }
+span[data-marker="\0021\0021\0021"]::before { --emoji: "🚩3"; --opacity: 0.6; }
+span[data-marker="\0021\0021\0021\0021"]::before { --emoji: "🚩4"; --opacity: 0.8; }
+span[data-marker="\0021\0021\0021\0021\0021"]::before { --emoji: "🚩5"; --opacity: 1; }
+span[data-marker="\003F"]::before { --emoji: "❓1"; --opacity: 0.2; }
+span[data-marker="\003F\003F"]::before { --emoji: "❓2"; --opacity: 0.4; }
+span[data-marker="\003F\003F\003F"]::before { --emoji: "❓3"; --opacity: 0.6; }
+span[data-marker="\003F\003F\003F\003F"]::before { --emoji: "❓4"; --opacity: 0.8; }
+span[data-marker="\003F\003F\003F\003F\003F"]::before { --emoji: "❓5"; --opacity: 1; }
+span[data-marker="\00A1"]::before { --emoji: "🔥1"; --opacity: 0.2; }
+span[data-marker="\00A1\00A1"]::before { --emoji: "🔥2"; --opacity: 0.4; }
+span[data-marker="\00A1\00A1\00A1"]::before { --emoji: "🔥3"; --opacity: 0.6; }
+span[data-marker="\00A1\00A1\00A1\00A1"]::before { --emoji: "🔥4"; --opacity: 0.8; }
+span[data-marker="\00A1\00A1\00A1\00A1\00A1"]::before { --emoji: "🔥5"; --opacity: 1; }
+span[data-marker="\003D"]::before { --emoji: "🟰1"; --opacity: 0.2; }
+span[data-marker="\003D\003D"]::before { --emoji: "🟰2"; --opacity: 0.4; }
+span[data-marker="\003D\003D\003D"]::before { --emoji: "🟰3"; --opacity: 0.6; }
+span[data-marker="\003D\003D\003D\003D"]::before { --emoji: "🟰4"; --opacity: 0.8; }
+span[data-marker="\003D\003D\003D\003D\003D"]::before { --emoji: "🟰5"; --opacity: 1; }
+span[data-marker="+"]::before { --emoji: "🟢1"; --opacity: 0.2; }
+span[data-marker="++"]::before { --emoji: "🟢2"; --opacity: 0.4; }
+span[data-marker="+++"]::before { --emoji: "🟢3"; --opacity: 0.6; }
+span[data-marker="++++"]::before { --emoji: "🟢4"; --opacity: 0.8; }
+span[data-marker="+++++"]::before { --emoji: "🟢5"; --opacity: 1; }
+span[data-marker="-"]::before { --emoji: "🔴1"; --opacity: 0.2; }
+span[data-marker="--"]::before { --emoji: "🔴2"; --opacity: 0.4; }
+span[data-marker="---"]::before { --emoji: "🔴3"; --opacity: 0.6; }
+span[data-marker="----"]::before { --emoji: "🔴4"; --opacity: 0.8; }
+span[data-marker="-----"]::before { --emoji: "🔴5"; --opacity: 1; }
