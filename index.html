@@ -20,38 +20,6 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://xbokmd.github.io/plastilinn/css.css">
-
-    <style>
-        @keyframes blinkRed {
-            0% {
-                background-color: transparent;
-            }
-
-            50% {
-                background-color: red;
-            }
-
-            100% {
-                background-color: transparent;
-            }
-        }
-
-        #show-selected {
-            animation: blinkRed 1s infinite;
-            background-color: transparent;
-        }
-
-        #show-selected:empty {
-            display: none;
-        }
-
-        .selected {
-            background-color: lightgrey;
-            border: blue;
-        }
-    </style>
-
-
 </head>
 
 <body>
@@ -65,52 +33,50 @@
                             <div>
                                 <img src="https://xbokmd.github.io/plastilinn/assets/logo.png" alt="Logo" class="h-8">
                             </div>
-                            <kbd class="kbd kbd-xs">Plastilinn V0.3.1
+                            <kbd class="kbd kbd-xs m-2">Plastilinn V0.3.1
                                 {{ license }} <span v-if="detectedLanguage"> ({{ detectedLanguage }})</span>
                             </kbd>
                             <div class="flex flex-row justify-between gap-2" id="plastilinn-menu">
                                 <button @click="changeSidebar('guides')"
                                     :class="{'selected': selectedButton === 'guides'}"
-                                    class="collapse-filter-button btn btn-primary btn-outline btn-sm">
+                                    class="collapse-filter-button btn pnn-btn">
                                     <span class="material-symbols-outlined" translate="no">
                                         fact_check
                                     </span>Guides
                                 </button>
                                 <button @click="changeSidebar('index')"
                                     :class="{'selected': selectedButton === 'index'}"
-                                    class="collapse-filter-button btn btn-primary btn-outline btn-sm">
+                                    class="collapse-filter-button btn pnn-btn">
                                     <span class="material-symbols-outlined" translate="no">
                                         list_alt
                                     </span>Index
                                 </button>
                                 <button @click="changeSidebar('filter')"
                                     :class="{'selected': selectedButton === 'filter'}"
-                                    class="collapse-filter-button btn btn-primary btn-outline btn-sm">
+                                    class="collapse-filter-button btn pnn-btn">
                                     <span class="material-symbols-outlined" translate="no">
                                         filter_alt
                                     </span>Filter
                                 </button>
                                 <button @click="changeSidebar('search')"
                                     :class="{'selected': selectedButton === 'search'}"
-                                    class="collapse-filter-button btn btn-primary btn-outline btn-sm">
+                                    class="collapse-filter-button btn pnn-btn">
                                     <span class="material-symbols-outlined" translate="no">
                                         search
                                     </span>Search
                                 </button>
-
                             </div>
                         </div>
 
-                        <div class="navbar-end">
+                        <div class="navbar-end gap-2">
                             <button id="downloadBtn" @click="downloadMarkdown"
-                                class="btn btn-primary btn-outline no-animation">
+                                class="collapse-filter-button btn pnn-btn">
                                 <span class="material-symbols-outlined" translate="no">
                                     download_for_offline
                                 </span>
                                 Download
                             </button>
-                            <button id="exportBtn" @click="downloadHTML"
-                                class="btn btn-primary btn-outline no-animation">
+                            <button id="exportBtn" @click="downloadHTML" class="collapse-filter-button btn pnn-btn">
                                 <span class="material-symbols-outlined" translate="no">
                                     download_for_offline
                                 </span>
@@ -118,7 +84,7 @@
                             </button>
                             <button @click="toggleAutoDownload"
                                 :class="{'bg-green-500': autoDownloadEnabled, 'bg-gray-500': !autoDownloadEnabled}"
-                                class="btn btn-primary btn-outline no-animation">
+                                class="collapse-filter-button btn pnn-btn">
                                 <span class="material-symbols-outlined" translate="no">
                                     toggle_on
                                 </span>

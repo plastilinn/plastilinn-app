@@ -439,8 +439,8 @@ height: 1.5em;
 margin: 0px auto; /* Añade margen arriba y abajo y centra horizontalmente */
 }
 
-.btn-primary {
-@apply dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12;
+.pnn-btn {
+    @apply dark:bg-gray-200 hover:bg-gray-200 dark:hover:bg-white bg-gray-100 rounded-xl px-4 py-2 flex items-center justify-center gap-2 transition ease hover:bg-gray-100 w-9/12 lg:w-fit sm:w-7/12 md:w-5/12;
 }
 
 .btn-primary:hover {
@@ -460,6 +460,34 @@ box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.5); /* Sombra suave alrededor */
 
 .md-block-content ul {
     padding-left: 10px;
+}
+
+@keyframes blinkRed {
+    0% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+#show-selected {
+    animation: blinkRed 1s infinite;
+    background-color: transparent;
+}
+
+#show-selected:empty {
+    display: none;
+}
+
+.selected {
+    background-color: lightgrey;
+    border: blue;
 }
 
 span[data-tag] {
