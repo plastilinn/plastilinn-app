@@ -830,7 +830,7 @@
                 determineDepthLevel(firstLine) {
                     // Esta expresión regular busca signos '#' al inicio de la línea seguidos directamente
                     // por otro '#' o un espacio, indicando un encabezado de Markdown.
-                    const match = firstLine.match(/^\s*(#+)\s/);
+                    const match = firstLine.match(/^\s*(#+)\s+/);
                     if (match) {
                         return match[1].length; // La longitud de la coincidencia es el nivel de profundidad.
                     }
@@ -926,10 +926,8 @@
                     const firstLine = blockContent.split(/\r?\n/)[0]; // Obtiene la primera línea
 
                     // Extrae el encabezado Markdown y la primera etiqueta (si existe) que esté directamente después del encabezado
-
-                    const matches = firstLine.match(/^(#+)\s*(.*?)(\s*#[^\s]+)?$/);
+                    const matches = firstLine.match(/^(#+\s*)(#[^\s]+)?\s*(.*)/);
                     if (matches) {
-                        const title = matches[2].trim();
                         const markdownHeader = matches[1]; // Encabezado Markdown (p.ej., '###')
                         const directTag = matches[2] ? `${matches[2]} ` : ''; // La etiqueta directa después del encabezado, si existe
                         const restOfTheTitle = matches[3]; // El resto del título después del encabezado y la etiqueta directa
@@ -1714,8 +1712,8 @@
 
                     // Sobrescribir la función heading para agregar los IDs automáticamente
                     renderer.heading = function (text, level) {
-                        const slug = marked.slugger().slug(text.replace(/[^a-zA-Z0-9]/g, '')); // Limpia el texto de caracteres especiales
-                        return `<h${level} id="${slug}">${text}</h${level}>`;
+                        const slug = marked.slugger().slug(text); // Crear un slug basado en el texto del encabezado
+                        return `<h${level} id="${slug}">${text}</h${level}>\n`;
                     };
 
                     // Establecer el renderer personalizado en Marked
