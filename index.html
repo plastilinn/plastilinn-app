@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.js"></script>
     <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://xbokmd.github.io/plastilinn/css.css">
+    <link rel="stylesheet" href="https://app.plastilinn.com/css.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                     <div id="navbar" class="navbar bg-base-100 shadow-2xl">
                         <div class="navbar-start">
                             <div>
-                                <img src="https://xbokmd.github.io/plastilinn/assets/logo.png" alt="Logo" class="h-8">
+                                <img src="https://app.plastilinn.com/assets/logo.png" alt="Logo" class="h-8">
                             </div>
                             <kbd class="kbd kbd-xs m-2">Plastilinn V0.3.1
                                 {{ license }} <span v-if="detectedLanguage"> ({{ detectedLanguage }})</span>
@@ -627,7 +627,7 @@
                 // METAMODEL
 
                 processMetamodel() {
-                    axios.get('https://xbokmd.github.io/plastilinn/metamodel/00000000.json')
+                    axios.get('https://app.plastilinn.com/metamodel/00000000.json')
                         .then((response) => {
                             if (response.data && response.data.classes && response.data.sections) {
                                 this.metamodel = response.data;
@@ -1033,7 +1033,7 @@
                     /// console.log("🚀 ~ openInfoModal ~ block:", block)
                     this.selectedInfoBlock = block;
                     this.selectedBlockId = block.id; // Asegúrate de tener selectedBlockId definido en tu data()
-                    this.selectedBlockInfoURL = `https://xbokmd.github.io/plastilinn/raw.html#/docs/xBoK/sections/${block.replace(/ /g, '_')}`;
+                    this.selectedBlockInfoURL = `https://app.plastilinn.com/raw.html#/docs/xBoK/sections/${block.replace(/ /g, '_')}`;
                     // Busca el índice de la línea basándose en el ID único
                     this.selectedBlockIndex = this.model.findIndex((item) => item.id === block.id);
                     this.isInfoModalOpen = true;
@@ -1727,7 +1727,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Plastilinn</title>
                 <link rel="stylesheet" href="https://stackedit.io/style.css" />
-                <link rel="stylesheet" href="https://xbokmd.github.io/plastilinn/css.css">
+                <link rel="stylesheet" href="https://app.plastilinn.com/css.css">
                 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
             </head>
             <body>
@@ -1787,7 +1787,7 @@
                 });
                 // Cargar la guía "Plastilinn documentation" al cargar la página
                 this.currentSidebarSection = 'guides'; // Cambia la sección activa a 'guides'
-                const guideUrl = 'https://xbokmd.github.io/plastilinn/docs/guides/plastilinn_documentation.md';
+                const guideUrl = 'https://app.plastilinn.com/docs/guides/plastilinn_documentation.md';
                 this.loadGuideMarkdownContent(guideUrl); // Cargar la guía directamente
 
                 // Agregar el listener cuando el componente esté montado
