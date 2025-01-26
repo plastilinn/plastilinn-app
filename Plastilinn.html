@@ -707,7 +707,7 @@
                     const lines = content.split(/\r?\n/);
 
                     lines.forEach((line) => {
-                        if (/^\s*#+\s+\S/.test(line)) {
+                        if (/^\s*#+/.test(line)) {
                             if (currentBlock.length > 0) {
                                 this.model.push(currentBlock.join('\n'));
                                 currentBlock = [];
@@ -926,7 +926,7 @@
                     const firstLine = blockContent.split(/\r?\n/)[0]; // Obtiene la primera línea
 
                     // Extrae el encabezado Markdown y la primera etiqueta (si existe) que esté directamente después del encabezado
-                    const matches = firstLine.match(/^(#+\s*)(#[^\s]+)?\s*(.*)/u);
+                    const matches = firstLine.match(/^(#+\s*)(#[^\s]+)?\s*(.*)/);
                     if (matches) {
                         const markdownHeader = matches[1]; // Encabezado Markdown (p.ej., '###')
                         const directTag = matches[2] ? `${matches[2]} ` : ''; // La etiqueta directa después del encabezado, si existe
@@ -979,19 +979,26 @@
                 },
 
                 generateMetamodelID(title, instanceClass) {
-                    // Elimina emojis del título usando una expresión regular
-                    const cleanTitle = title.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '').trim();
-
+                    // Si instanceClass está vacío o es null, retorna directamente el title
                     if (!instanceClass) {
-                        return cleanTitle; // Usa el título limpio si no hay clase de instancia
+                        return title;
                     }
 
-                    if (!cleanTitle.includes(" - ")) {
+                    // Si instanceClass no está vacío y el título no contiene un guión con un espacio a cada lado
+                    if (instanceClass && !title.includes(" - ")) {
                         return `${instanceClass} Name`;
                     }
 
-                    const titleAfterDash = cleanTitle.substring(cleanTitle.indexOf(" - ") + 3);
-                    return `${instanceClass} Name - ${titleAfterDash}`;
+                    // Si instanceClass no está vacío y el título contiene un guión con un espacio a cada lado
+                    if (instanceClass && title.includes(" - ")) {
+                        // Extrae el texto a la derecha del guión, incluyendo el guión y los espacios
+                        const titleAfterDash = title.substring(title.indexOf(" - ") + 3);
+                        // Construye metamodelID usando instanceClass y el texto a la derecha del guión, reemplazando el inicio del título por "Name"
+                        return `${instanceClass} Name - ${titleAfterDash}`;
+                    }
+
+                    // En cualquier otro caso (por precaución), retorna el título
+                    return title;
                 },
 
                 importMetamodelData(metamodelID) {
@@ -1406,6 +1413,8 @@
                     });
                 },
 
+
+
                 // Método para simular la subida del archivo después de la descarga
                 simulateFileUpload(blob, fileName) {
                     // Crea un archivo simulado (File API no está soportada directamente en blobs, pero esta es una solución aproximada)
@@ -1787,7 +1796,7 @@
                 });
                 // Cargar la guía "Plastilinn documentation" al cargar la página
                 this.currentSidebarSection = 'guides'; // Cambia la sección activa a 'guides'
-                const guideUrl = 'https://xbokmd.github.io/plastilinn/docs/guides/plastilinn_documentation.md';
+                const guideUrl = '/guides.md';
                 this.loadGuideMarkdownContent(guideUrl); // Cargar la guía directamente
 
                 // Agregar el listener cuando el componente esté montado
