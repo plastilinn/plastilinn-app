@@ -389,22 +389,6 @@
                         <div class="mt-2">
                             <div id="editor-container"></div>
                         </div>
-                        <!-- Mostrar botones dinámicos basados en el metamodelID del bloque -->
-                        <div v-if="selectedBlockIndex !== null">
-                            <div v-for="prompt in getPromptsForMetamodelID(model[selectedBlockIndex].metamodelID)"
-                                :key="prompt.id">
-                                <div role="alert" class="alert">🤖 Artificial Intelligence (click to open AI toold and
-                                    paste the prompt copied to your clipboard)
-                                    <button class="btn m-2 btn-primary"
-                                        @click="copyPromptToClipboard(prompt.prompt); openNewWindowWithURL(prompt.url); printMessage('Prompt copied. Paste it in the chatbot!!!')">
-                                        <span class="material-symbols-outlined" translate="no">
-                                            content_copy
-                                        </span>
-                                        {{ prompt.caption }}
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
@@ -1033,7 +1017,7 @@
                     /// console.log("🚀 ~ openInfoModal ~ block:", block)
                     this.selectedInfoBlock = block;
                     this.selectedBlockId = block.id; // Asegúrate de tener selectedBlockId definido en tu data()
-                    this.selectedBlockInfoURL = `https://app.plastilinn.com/raw.html#/docs/xBoK/sections/${block.replace(/ /g, '_')}`;
+                    this.selectedBlockInfoURL = `https://docs.plastilinn.com/#/pages/sections/${block.replace(/ /g, '_')}`;
                     // Busca el índice de la línea basándose en el ID único
                     this.selectedBlockIndex = this.model.findIndex((item) => item.id === block.id);
                     this.isInfoModalOpen = true;
@@ -1105,16 +1089,6 @@
                     } else {
                         console.error('No se encontró la sección de ayuda o la sección de edición.');
                     }
-                },
-
-                getPromptsForMetamodelID(metamodelID) {
-                    return this.metamodel.prompts.filter(prompt => {
-                        // Añadir log para ver los valores de prompt.item y metamodelID en la consola
-                        console.log('prompt.item:', prompt.item, 'metamodelID:', metamodelID);
-
-                        // Filtrar los prompts que coinciden con el metamodelID
-                        return prompt.item === metamodelID;
-                    });
                 },
 
                 // EDIT MD DOCUMENT
