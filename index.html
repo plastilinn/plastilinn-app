@@ -567,6 +567,11 @@
 
                 orderedBlocks() {
                     return this.model.sort((a, b) => a.uid - b.uid);
+                },
+
+                // Crear una propiedad computada para obtener el título sin emojis
+                titleSanitized() {
+                    return this.removeEmojis(this.block.title);
                 }
 
             },
@@ -717,9 +722,11 @@
                     return message;
                 },
                 // Método para asegurarte de que se elimine el listener cuando no es necesario
+
                 addBeforeUnloadListener() {
                     window.addEventListener('beforeunload', this.handleBeforeUnload);
                 },
+
                 removeBeforeUnloadListener() {
                     window.removeEventListener('beforeunload', this.handleBeforeUnload);
                 },
@@ -794,6 +801,8 @@
                         block.content = blockContent;
                     }
 
+                    block.titleSanitized = this.removeEmojis(block.title);
+
                     if (!isNewBlock || block.content) {
                         const blockIndex = this.model.findIndex(b => b.id === block.id);
                         this.updateDependentModelBlockFields(blockIndex);
@@ -802,6 +811,11 @@
                     // Siempre devuelve el bloque para operaciones de creación. Para actualizaciones,
                     // el bloque ya está actualizado en el modelo.
                     return block;
+                },
+
+                removeEmojis(text) {
+                    // Esta expresión regular elimina cualquier emoji
+                    return text.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '');
                 },
 
                 determineBlockType(firstLine) {
@@ -1761,7 +1775,7 @@
                 });
                 // Cargar la guía "Plastilinn documentation" al cargar la página
                 this.currentSidebarSection = 'guides'; // Cambia la sección activa a 'guides'
-                const guideUrl = 'https://app.plastilinn.com/docs/guides/plastilinn_documentation.md';
+                const guideUrl = 'docs/guides/plastilinn_documentation.md';
                 this.loadGuideMarkdownContent(guideUrl); // Cargar la guía directamente
 
                 // Agregar el listener cuando el componente esté montado
