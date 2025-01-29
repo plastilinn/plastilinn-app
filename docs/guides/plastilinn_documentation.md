@@ -19,8 +19,7 @@ Watch the following video (5 minutes)
 Write a 1-2 paragraph description of your business idea in the "Business summary" section of the document. Click on
     the "Business summary" button below to navigate to the "Business summary" section of the document.
 
-☑️Business
-    summary
+Edit the 🆔 [Business summary](#Business summary) block
 
 Write your own business description or copy/paste the text in the textarea below in case you're just playing around
     with plastilinn.
@@ -111,7 +110,7 @@ Define what makes your product or service valuable to your target audience.
 
 ### ▶️ Channels
 Describe the channels through which you reach your customers.
-Edit the 🆔 [🎙️Channels](#🎙️Channels) block
+Edit the 🆔 [🎙️Channels](#Channels) block
 
 ### ▶️ Customer Relationships
 Outline the type of relationship you want to build with each customer segment.
@@ -127,7 +126,7 @@ Edit the 🆔 [⭐Resources](#Resources) block
 
 ### ▶️ Key Activities
 List the main activities your business must undertake to operate effectively.
-Edit the 🆔 [⚙️Activities](#⚙️Activities) block
+Edit the 🆔 [⚙️Activities](#Activities) block
 
 ### ▶️ Key Partners
 Identify the key partners who are essential to your business's success.
