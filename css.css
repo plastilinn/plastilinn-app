@@ -16,9 +16,9 @@ html {
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
-        'wght' 200,
+        'wght' 500,
         'GRAD' 0,
-        'opsz' 24
+        'opsz' 40
 }
 
 .material-symbols-outlined {
@@ -55,12 +55,26 @@ h6 {
 
 .metadata-container button,
 .metadata-container span {
-    height: 1.2rem;
     min-height: 2rem;
     padding: 0.2rem;
     margin: 0.2rem;
     border-radius: 4px;
     background-color: whitesmoke;
+}
+
+/* Ocultar .md-block-container-right por defecto */
+.md-block-container-right {
+    display: none;
+}
+
+/* Mostrar .md-block-container-right cuando el ratón esté sobre .md-block */
+.md-block:hover .md-block-container-right {
+    display: block;
+}
+
+button.btn a,
+button.btn a span {
+  color: black !important;
 }
 
 .highlight-text {
@@ -119,9 +133,8 @@ a {
 
 .md-block-container-middle>div {
     /* Tus estilos aquí */
-    border-bottom: 1px solid #F5F5F5;
+    border-top: 1px solid #F5F5F5;
     padding: 1rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .toastui-editor-defaultUI div[contenteditable="true"] {
@@ -377,6 +390,9 @@ code {
 h1, h2, h3, h4, h5, h6 {
     font-size: revert; /* Esto restablecerá el tamaño de fuente al valor predeterminado del navegador */
     font-weight: bold; /* Esto hará que los encabezados sean más gruesos */
+    width: 100%; /* Asegura que el encabezado ocupe todo el ancho disponible */
+    display: block; /* Ya son de tipo bloque por defecto, pero por seguridad */
+    margin-bottom: 24px;
 }
 
 
@@ -391,17 +407,17 @@ h2 {
 }
 
 h3 {
-    font-size: 1.75em !important; /* Ajusta según necesites */
+    font-size: 1.6em !important; /* Ajusta según necesites */
     font-weight: bold !important;
 }
 
 h4 {
-    font-size: 1.5em !important; /* Ajusta según necesites */
+    font-size: 1.2em !important; /* Ajusta según necesites */
     font-weight: bold !important;
 }
 
 h5 {
-    font-size: 1.25em !important; /* Ajusta según necesites */
+    font-size: 1.1em !important; /* Ajusta según necesites */
     font-weight: bold !important;
 }
 
