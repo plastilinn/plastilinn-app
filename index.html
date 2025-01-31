@@ -131,7 +131,7 @@
 
             </header>
             <!-- MAIN CONTAINER -->
-            <div class="mx-auto flex overflow-y-hidden">
+            <div class="mx-auto flex overflow-y-hidden  bg-gray-100">
                 <!-- SIDEBAR -->
                 <nav class="order-first w-2/5 overflow-y-auto custom-scrollbar"
                     style="min-width: 520px; scroll-behavior: smooth;">
@@ -166,7 +166,7 @@
                                         <div class="flex flex-col w-full p-4 bg-white rounded-lg shadow-sm">
                                             <!-- Filtro de etiquetas -->
                                             <div class="flex flex-col mt-4">
-                                                <div class="tag-group mb-4 px-2 py-3 bg-gray-200 rounded-md shadow-lg">
+                                                <div class="tag-group mb-4 px-2 py-3 bg-gray-100 rounded-md shadow-lg">
                                                     <div class="tag-name text-center font-semibold text-blue-600 mb-2">
                                                         Tags <a href="https://plastilinn.com/#/pages/guide?id=tags"
                                                             target="_blank">ℹ️</a>
@@ -185,7 +185,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="marker-group mb-4 px-2 py-3 bg-gray-200 rounded-md shadow-lg">
+                                            <div class="marker-group mb-4 px-2 py-3 bg-gray-100 rounded-md shadow-lg">
                                                 <div class="tag-name text-center font-semibold text-blue-600 mb-2">
                                                     Markers <a href="https://plastilinn.com/#/pages/guide?id=markers"
                                                         target="_blank">ℹ️</a>
@@ -216,7 +216,7 @@
                         </div>
                         <div
                             v-bind:class="{ block: currentSidebarSection === 'search', hidden: currentSidebarSection !== 'search' }">
-                            <div class="flex flex-col mb-4 p-2 bg-gray-200 rounded-lg shadow">
+                            <div class="flex flex-col mb-4 p-2 bg-gray-100 rounded-lg shadow">
                                 <h5 class="card-title">Search and replace</h5>
                                 <div class="flex items-center mb-4 p-2 bg-gray-50 rounded-lg shadow">
                                     <span class="material-symbols-outlined" translate="no">
@@ -315,7 +315,7 @@
                                                 class="md-block-container-right metadata-container text-gray-500 rounded-md text-sm text-center">
 
                                                 <div
-                                                    class="flex flex-col items-start justify-start w-full bg-gray-200 rounded-md text-sm text-gray-500">
+                                                    class="flex flex-col items-start justify-start w-full bg-gray-100 rounded-md text-sm text-gray-500">
                                                     <div class="xbok-block-tags flex flex-col items-center"
                                                         v-if="block.metamodel">
                                                         <button @click="openBlockEditModal(block)"

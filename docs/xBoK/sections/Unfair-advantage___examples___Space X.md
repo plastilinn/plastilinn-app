@@ -1,2 +1,0 @@
-    SpaceX's "unfair advantage," lies primarily in its ability to rapidly innovate and iterate on rocket technology, driven by its vertical integration and in-house manufacturing capabilities. Unlike traditional aerospace companies that rely on a complex web of suppliers for parts and components, SpaceX designs, manufactures, and tests the majority of its rocket components within its own facilities.
-

@@ -31,12 +31,12 @@ Artificial intelligence can suggest content to complete each section of the docu
 
 Once you click the button below, information related to this specific section ("Problems") will appear at the top of this sidebar. Click on the button "🤖 Get suggestions from AI assistant," and a message will indicate that the document's content has been copied to your clipboard. Then use the "Open" button to open the Plastilinn AI Assistant in a new window, paste (CTRL+V) the prompt, wait for a response, and copy/paste it into the "Problems" section of your document. Review the response and make any modifications you deem appropriate.
 
-Edit the 🆔 [😟Problems](#Problems) block
+Edit the 🆔 [😟Problems](#problems) block
 
 #### Proposed solution
 Repeat the previous steps by yourself, but this time with the "Solutions" section of the document. Solutions are the products or services you offer to your customers to solve their problems.
 
-Edit the 🆔 [💊Solutions](#Solutions) block
+Edit the 🆔 [💊Solutions](#solutions) block
 
 ### ❔ What do you want to do now?
 Option 1: Work on my business plan: Click on the button below to open the Basic Business Model guide and follow the steps provided to gradually complete your business model. You might want to delete the sample content that you created during this guide.
@@ -45,22 +45,22 @@ Option 2: Learn advanced features: Continue following this guide's next step bel
 
 #### Use markers
 Learn what markers are and how to use them. Add uncertainty markers to the document sections previously completed.
-Edit the 🆔 [😟Problems](#Problems) block
-Edit the 🆔 [💊Solutions](#Solutions) block
+Edit the 🆔 [😟Problems](#problems) block
+Edit the 🆔 [💊Solutions](#solutions) block
 
 ## ☑️ Basic business model
 
 #### Customer profile
 Describe your main customer.
-Edit the 🆔 [🙎Profiles](#Profiles) block
+Edit the 🆔 [🙎Profiles](#profiles) block
 
 #### Customer problems
 Identify the top 3 problems you help them solve.
-Edit the 🆔 [😟Problems](#Problems) block
+Edit the 🆔 [😟Problems](#problems) block
 
 #### Proposed solution
 Describe the solution (product or service) you will offer.
-Edit the 🆔 [💊Solutions](#Solutions) block
+Edit the 🆔 [💊Solutions](#solutions) block
 
 #### Value proposition
 Describe the main value proposition for your customers.
@@ -68,22 +68,22 @@ Describe the main value proposition for your customers.
 
 #### Channels
 Identify the channels you will use to make your customers aware of you.
-Edit the 🆔 [🎙️Channels](#🎙️Channels) block
+Edit the 🆔 [🎙️Channels](#🎙️channels) block
 
 #### Revenue
 Describe your business revenue streams.
-Edit the 🆔 [💰Revenue](#Revenue) block
+Edit the 🆔 [💰Revenue](#revenue) block
 
 #### Identify the main risks
 Identify the main 3 risks of the project.
-Edit the 🆔 [🚨Risks](#Risks) block
+Edit the 🆔 [🚨Risks](#risks) block
 
 ## ☑️ Business Model Canvas
 This guide introduces you to each section of the Business Model Canvas, helping you structure your business strategy.
 
 #### Customer Segments
 Identify your primary customer profile.
-Edit the 🆔 [🙎Profiles](#Profiles) block
+Edit the 🆔 [🙎Profiles](#profiles) block
 
 #### Value Propositions
 Define what makes your product or service valuable to your target audience.
@@ -91,31 +91,31 @@ Define what makes your product or service valuable to your target audience.
 
 #### Channels
 Describe the channels through which you reach your customers.
-Edit the 🆔 [🎙️Channels](#Channels) block
+Edit the 🆔 [🎙️Channels](#🎙️channels) block
 
 #### Customer Relationships
 Outline the type of relationship you want to build with each customer segment.
-Edit the 🆔 [🤝Relationship](#Relationship) block
+Edit the 🆔 [🤝Relationship](#relationship) block
 
 #### Revenue Streams
 Identify your main sources of revenue.
-Edit the 🆔 [💰Revenue](#Revenue) block
+Edit the 🆔 [💰Revenue](#revenue) block
 
 #### Key Resources
 Specify the critical resources necessary for delivering your value proposition.
-Edit the 🆔 [⭐Resources](#Resources) block
+Edit the 🆔 [⭐Resources](#resources) block
 
 #### Key Activities
 List the main activities your business must undertake to operate effectively.
-Edit the 🆔 [⚙️Activities](#Activities) block
+Edit the 🆔 [⚙️Activities](#activities) block
 
 #### Key Partners
 Identify the key partners who are essential to your business's success.
-Edit the 🆔 [🤔Stakeholders](#Stakeholders) block
+Edit the 🆔 [🤔Stakeholders](#stakeholders) block
 
 #### Cost Structure
 Define the major costs associated with your business model.
-Edit the 🆔 [💸Costs](#Costs) block
+Edit the 🆔 [💸Costs](#costs) block
 
 #### Visualize the canvas
 In the plastilinn sidebar click on the "Actions" tab and then in the "Export content" button.
@@ -125,168 +125,168 @@ This guide helps you understand and create a strong value proposition aligned wi
 
 #### Products and services
 Define your main solution
-Edit the 🆔 [💊Solutions](#Solutions) block
+Edit the 🆔 [💊Solutions](#solutions) block
 
 #### Gain Creators
 List ways in which your product or service enhances customer experience (use tag 🎉#benefit)
-Edit the 🆔 [🌟Features](#Features) block
+Edit the 🆔 [🌟Features](#features) block
 
 #### Pain Relievers
 Identify how your product or service addresses customer pains (use tag 💊#reliever)
-Edit the 🆔 [🌟Features](#Features) block
+Edit the 🆔 [🌟Features](#features) block
 
 #### Customer Gains
 Describe the benefits that customers will gain from your offering (use tag 🎉#gain)
-Edit the 🆔 [😟Problems](#Problems) block
+Edit the 🆔 [😟Problems](#problems) block
 
 #### Customer Pains
 Outline the main pains or challenges your customers face (use tag 😖#pain)
-Edit the 🆔 [😟Problems](#Problems) block
+Edit the 🆔 [😟Problems](#problems) block
 
 #### Customer jobs
 Detail the specific customer jobs for this value proposition.
-Edit the 🆔 [😟Problems](#Problems) block
+Edit the 🆔 [😟Problems](#problems) block
 
 ## ☑️ Empathy Map
 This guide helps you understand customer emotions and behaviors for deeper insight.
 
 #### Think & Feel
 Describe what your customer might be thinking (using the 💭#think tag) and feeling (using the 😊#feel tag) (use tag 💭#think 😊#feel)
-Edit the 🆔 [😐Emotions](#Emotions) block
+Edit the 🆔 [😐Emotions](#emotions) block
 
 #### Hear
 List what influences your customer, including people and media (use tag 👂#hear)
-Edit the 🆔 [👁️Perceptions](#👁️Perceptions) block
+Edit the 🆔 [👁️Perceptions](#👁️perceptions) block
 
 #### See
 Describe what your customer observes in their environment (use tag 👀#see)
-Edit the 🆔 [👁️Perceptions](#👁️Perceptions) block
+Edit the 🆔 [👁️Perceptions](#👁️perceptions) block
 
 #### Say & Do
 Identify what your customer says and does publicly (use tag 💬#say 🛠️#do)
-Edit the 🆔 [😐Emotions](#Emotions) block
+Edit the 🆔 [😐Emotions](#emotions) block
 
 #### Pains
 List the main pains your customer experiences (use tag 😖#pain)
-Edit the 🆔 [😟Problems](#Problems) block
+Edit the 🆔 [😟Problems](#problems) block
 
 #### Gains
 Describe the benefits your customer values (use tag 🎉#gain)
-Edit the 🆔 [😟Problems](#Problems) block
+Edit the 🆔 [😟Problems](#problems) block
 
 ## ☑️ Customer Journey Map
 This guide helps map the customer’s experience from awareness to advocacy.
 
 #### Attention
 Identify how you capture your customer's initial attention (use tag ✈️#attention)
-Edit the 🆔 [✈️Journey](#✈️Journey) block
+Edit the 🆔 [✈️Journey](#✈️journey) block
 
 #### Interest
 List ways to engage customer interest in your offering (use tag ✈️#interest)
-Edit the 🆔 [✈️Journey](#✈️Journey) block
+Edit the 🆔 [✈️Journey](#✈️journey) block
 
 #### Consideration
 Describe how you support customers in considering your solution (use tag ✈️#consideration)
-Edit the 🆔 [✈️Journey](#✈️Journey) block
+Edit the 🆔 [✈️Journey](#✈️journey) block
 
 #### Decision
 Outline what influences the customer’s final decision to choose your solution (use tag ✈️#decision)
-Edit the 🆔 [✈️Journey](#✈️Journey) block
+Edit the 🆔 [✈️Journey](#✈️journey) block
 
 #### Evangelization
 Encourage satisfied customers to promote your brand (use tag ✈️#evangelization)
-Edit the 🆔 [✈️Journey](#✈️Journey) block
+Edit the 🆔 [✈️Journey](#✈️journey) block
 
 ## ☑️ Complete Business Plan
 All business plan sections
 
 📄Business summary
 📂Business idea
-Edit the 🆔 [📄Inspiration](#Inspiration) block
-Edit the 🆔 [📄Opportunity](#Opportunity) block
+Edit the 🆔 [📄Inspiration](#inspiration) block
+Edit the 🆔 [📄Opportunity](#opportunity) block
 📄Business status
-Edit the 🆔 [📄Challenges](#Challenges) block
+Edit the 🆔 [📄Challenges](#challenges) block
 📂Business objectives
-Edit the 🆔 [📄Mission](#Mission) block
-Edit the 🆔 [📄Vision](#Vision) block
-Edit the 🆔 [🧠Organizational values](#🧠Organizational values) block
-Edit the 🆔 [🎯Organizational goals](#🎯Organizational goals) block
-Edit the 🆔 [🤔Stakeholders](#Stakeholders) block
-Edit the 🆔 [🙋Segments](#Segments) block
-Edit the 🆔 [✂️Segmentation criteria](#✂️Segmentation criteria) block
+Edit the 🆔 [📄Mission](#mission) block
+Edit the 🆔 [📄Vision](#vision) block
+Edit the 🆔 [🧠Organizational values](#🧠organizational values) block
+Edit the 🆔 [🎯Organizational goals](#🎯organizational goals) block
+Edit the 🆔 [🤔Stakeholders](#stakeholders) block
+Edit the 🆔 [🙋Segments](#segments) block
+Edit the 🆔 [✂️Segmentation criteria](#✂️segmentation criteria) block
 📈Market trends
 📄Market size
-Edit the 🆔 [🏅Competition](#Competition) block
-Edit the 🆔 [🎩Roles](#Roles) block
-Edit the 🆔 [🙎Profiles](#Profiles) block
-Edit the 🆔 [✂️Segmentation](#✂️Segmentation) block
-Edit the 🆔 [📄Persona](#Persona) block
-Edit the 🆔 [😟Problems](#Problems) block
+Edit the 🆔 [🏅Competition](#competition) block
+Edit the 🆔 [🎩Roles](#roles) block
+Edit the 🆔 [🙎Profiles](#profiles) block
+Edit the 🆔 [✂️Segmentation](#✂️segmentation) block
+Edit the 🆔 [📄Persona](#persona) block
+Edit the 🆔 [😟Problems](#problems) block
 💎Value proposition
-Edit the 🆔 [📣Messages](#Messages) block
-Edit the 🆔 [🎙️Channels](#🎙️Channels) block
-Edit the 🆔 [🤝Relationship](#Relationship) block
-Edit the 🆔 [⭐Assets](#Assets) block
-Edit the 🆔 [🛒Transactions](#Transactions) block
-Edit the 🆔 [👁️Perceptions](#👁️Perceptions) block
-Edit the 🆔 [😐Emotions](#Emotions) block
-Edit the 🆔 [🦾Behaviors](#Behaviors) block
-Edit the 🆔 [✈️Journey](#✈️Journey) block
-Edit the 🆔 [💊Solutions](#Solutions) block
-Edit the 🆔 [📄Components](#Components) block
-Edit the 🆔 [🌟Features](#Features) block
-Edit the 🆔 [📄Roadmap](#Roadmap) block
-Edit the 🆔 [📄Pricing](#Pricing) block
-Edit the 🆔 [🛍️Offerings](#🛍️Offerings) block
-Edit the 🆔 [📄Brochure](#Brochure) block
-Edit the 🆔 [📂Marketing](#Marketing) block
-Edit the 🆔 [📄Naming](#Naming) block
-Edit the 🆔 [📄Branding](#Branding) block
+Edit the 🆔 [📣Messages](#messages) block
+Edit the 🆔 [🎙️Channels](#🎙️channels) block
+Edit the 🆔 [🤝Relationship](#relationship) block
+Edit the 🆔 [⭐Assets](#assets) block
+Edit the 🆔 [🛒Transactions](#transactions) block
+Edit the 🆔 [👁️Perceptions](#👁️perceptions) block
+Edit the 🆔 [😐Emotions](#emotions) block
+Edit the 🆔 [🦾Behaviors](#behaviors) block
+Edit the 🆔 [✈️Journey](#✈️journey) block
+Edit the 🆔 [💊Solutions](#solutions) block
+Edit the 🆔 [📄Components](#components) block
+Edit the 🆔 [🌟Features](#features) block
+Edit the 🆔 [📄Roadmap](#roadmap) block
+Edit the 🆔 [📄Pricing](#pricing) block
+Edit the 🆔 [🛍️Offerings](#🛍️offerings) block
+Edit the 🆔 [📄Brochure](#brochure) block
+Edit the 🆔 [📂Marketing](#marketing) block
+Edit the 🆔 [📄Naming](#naming) block
+Edit the 🆔 [📄Branding](#branding) block
 📄Visual identity
-Edit the 🆔 [📄Logo](#Logo) block
-Edit the 🆔 [📄Media plan](#📄Media plan) block
-Edit the 🆔 [📄Operations](#Operations) block
-Edit the 🆔 [⚙️Activities](#⚙️Activities) block
-Edit the 🆔 [👔Functions](#Functions) block
-Edit the 🆔 [⭐Resources](#Resources) block
-Edit the 🆔 [👤Team](#Team) block
-Edit the 🆔 [🎯Goals](#Goals) block
-Edit the 🆔 [🔧Skills](#Skills) block
-Edit the 🆔 [👔Functions](#Functions) block
-Edit the 🆔 [➡️Contributions](#➡️Contributions) block
-Edit the 🆔 [⬅️Compensations](#⬅️Compensations) block
-Edit the 🆔 [🪪Positions](#Positions) block
+Edit the 🆔 [📄Logo](#logo) block
+Edit the 🆔 [📄Media plan](#📄media plan) block
+Edit the 🆔 [📄Operations](#operations) block
+Edit the 🆔 [⚙️Activities](#⚙️activities) block
+Edit the 🆔 [👔Functions](#functions) block
+Edit the 🆔 [⭐Resources](#resources) block
+Edit the 🆔 [👤Team](#team) block
+Edit the 🆔 [🎯Goals](#goals) block
+Edit the 🆔 [🔧Skills](#skills) block
+Edit the 🆔 [👔Functions](#functions) block
+Edit the 🆔 [➡️Contributions](#➡️contributions) block
+Edit the 🆔 [⬅️Compensations](#⬅️compensations) block
+Edit the 🆔 [🪪Positions](#positions) block
 📄Project plan
-Edit the 🆔 [🗓️Phases](#🗓️Phases) block
-Edit the 🆔 [🏁Milestones](#Milestones) block
-Edit the 🆔 [📐Metrics](#Metrics) block
-Edit the 🆔 [📂Finance](#Finance) block
-Edit the 🆔 [💰Revenue](#Revenue) block
+Edit the 🆔 [🗓️Phases](#🗓️phases) block
+Edit the 🆔 [🏁Milestones](#milestones) block
+Edit the 🆔 [📐Metrics](#metrics) block
+Edit the 🆔 [📂Finance](#finance) block
+Edit the 🆔 [💰Revenue](#revenue) block
 📄Life Time Value
-Edit the 🆔 [💸Costs](#Costs) block
-Edit the 🆔 [📄Customer Aquisition Cost](#📄Customer Aquisition Cost) block
+Edit the 🆔 [💸Costs](#costs) block
+Edit the 🆔 [📄Customer Aquisition Cost](#📄customer aquisition cost) block
 📄Unit economics
 💵Funding sources
-Edit the 🆔 [💼Shareholders](#Shareholders) block
-Edit the 🆔 [📄Projections](#Projections) block
-Edit the 🆔 [📂Legal](#Legal) block
+Edit the 🆔 [💼Shareholders](#shareholders) block
+Edit the 🆔 [📄Projections](#projections) block
+Edit the 🆔 [📂Legal](#legal) block
 📄Legal issues
-Edit the 🆔 [📄Contracts](#Contracts) block
-Edit the 🆔 [📂Communication](#Communication) block
-Edit the 🆔 [📄Pitch](#Pitch) block
+Edit the 🆔 [📄Contracts](#contracts) block
+Edit the 🆔 [📂Communication](#communication) block
+Edit the 🆔 [📄Pitch](#pitch) block
 📄Business brochure
-Edit the 🆔 [📄Web](#Web) block
-Edit the 🆔 [📄Storytelling](#Storytelling) block
-Edit the 🆔 [📄Presentations](#Presentations) block
-Edit the 🆔 [📂Analysis](#Analysis) block
-Edit the 🆔 [🔮Assumptions](#Assumptions) block
-Edit the 🆔 [🚨Risks](#Risks) block
-Edit the 🆔 [📄SWOT](#SWOT) block
+Edit the 🆔 [📄Web](#web) block
+Edit the 🆔 [📄Storytelling](#storytelling) block
+Edit the 🆔 [📄Presentations](#presentations) block
+Edit the 🆔 [📂Analysis](#analysis) block
+Edit the 🆔 [🔮Assumptions](#assumptions) block
+Edit the 🆔 [🚨Risks](#risks) block
+Edit the 🆔 [📄SWOT](#swot) block
 📄Unfair advantage
-Edit the 🆔 [📂Validation](#Validation) block
-Edit the 🆔 [🧪Experiments](#Experiments) block
-Edit the 🆔 [📄References](#References) block
-Edit the 🆔 [📄Keys](#Keys) block
-Edit the 🆔 [📄Metamodel](#Metamodel) block
-Edit the 🆔 [📄Tags](#Tags) block
-Edit the 🆔 [📄Markers](#Markers) block
+Edit the 🆔 [📂Validation](#validation) block
+Edit the 🆔 [🧪Experiments](#experiments) block
+Edit the 🆔 [📄References](#references) block
+Edit the 🆔 [📄Keys](#keys) block
+Edit the 🆔 [📄Metamodel](#metamodel) block
+Edit the 🆔 [📄Tags](#tags) block
+Edit the 🆔 [📄Markers](#markers) block
