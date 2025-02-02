@@ -44,6 +44,13 @@
                                         fact_check
                                     </span>Guides
                                 </button>
+                                <button @click="changeSidebar('views')"
+                                    :class="{'selected': selectedButton === 'views'}"
+                                    class="collapse-filter-button btn pnn-btn">
+                                    <span class="material-symbols-outlined" translate="no">
+                                        visibility
+                                    </span>Views
+                                </button>
                                 <button @click="changeSidebar('index')"
                                     :class="{'selected': selectedButton === 'index'}"
                                     class="collapse-filter-button btn pnn-btn">
