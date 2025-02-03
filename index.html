@@ -44,13 +44,6 @@
                                         fact_check
                                     </span>Guides
                                 </button>
-                                <button @click="changeSidebar('views')"
-                                    :class="{'selected': selectedButton === 'views'}"
-                                    class="collapse-filter-button btn pnn-btn">
-                                    <span class="material-symbols-outlined" translate="no">
-                                        visibility
-                                    </span>Views
-                                </button>
                                 <button @click="changeSidebar('index')"
                                     :class="{'selected': selectedButton === 'index'}"
                                     class="collapse-filter-button btn pnn-btn">
@@ -72,6 +65,10 @@
                                         search
                                     </span>Search
                                 </button>
+                                <button class="btn" onclick="openMyModal()"><span class="material-symbols-outlined"
+                                        translate="no">
+                                        visibility
+                                    </span>Views</button>
                             </div>
                         </div>
 
@@ -378,6 +375,7 @@
                     </div>
                 </main>
             </div>
+
             <!-- FOOTER -->
             <!-- <footer class="border-t border-gray-200 p-2">Footer</footer> -->
         </div>
@@ -421,6 +419,35 @@
                 <div id="doc-editor-container"></div>
             </div>
         </div>
+
+
+        <div id="modalViews"
+            class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-auto w-full z-50 flex justify-center hidden">
+            <!-- Agregamos 'mt-10' para que la modal tenga un margen superior y no quede pegada al borde -->
+            <div class="relative bg-white w-11/12 max-h-[90vh] p-5 shadow-lg rounded-md overflow-y-auto mt-10">
+                <div v-if="viewsContent">
+                    <button class="btn m-2 btn-error" onclick="closeMyModal()">Close</button>
+                    <div v-html="viewsContent"></div>
+                </div>
+                <div class="flex justify-end">
+                    <button class="btn m-2 btn-error" onclick="closeMyModal()">Close</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            // Funciones para abrir y cerrar la modal
+            function openMyModal() {
+                document.getElementById('modalViews').classList.remove('hidden');
+            }
+
+            function closeMyModal() {
+                document.getElementById('modalViews').classList.add('hidden');
+            }
+        </script>
+
+
         <div id="confirmation-message"
             class="fixed top-4 left-1/2 transform -translate-x-1/2 hidden bg-green-500 text-white py-2 px-4 rounded shadow-md transition-opacity duration-300 opacity-0 z-50">
         </div>
@@ -439,6 +466,7 @@
                     newMarkdownContent: '',
                     showGuidesSelect: false, // Controla la visibilidad del select
                     markdownGuideContent: '', // Almacena el contenido del Markdown cargado
+                    viewsContent: '',
                     isArtifactModalOpen: false,
                     artifactModalContent: '', // Almacenará el contenido HTML generado
                     generatedContent: '',
@@ -1667,6 +1695,20 @@
                     }
                 },
 
+                async loadViewsContent(url) {
+                    if (url) {
+                        try {
+                            const response = await fetch(url);
+                            const views = await response.text();
+                            this.viewsContent = views;
+                        } catch (error) {
+                            this.viewsContent = '';
+                        }
+                    } else {
+                        this.viewsContent = '';
+                    }
+                },
+
                 setArtifactBusinessModelCanvas() {
                     this.isArtifactModalOpen = true;
                 },
@@ -1800,17 +1842,18 @@
                     gfm: true, // Habilita GitHub Flavored Markdown (GFM)
                     breaks: true, // Convierte los saltos de línea simples en <br>
                 });
-                // Cargar la guía "Plastilinn documentation" al cargar la página
-                this.currentSidebarSection = 'guides'; // Cambia la sección activa a 'guides'
+                this.currentSidebarSection = 'guides';
                 const guideUrl = 'docs/guides/plastilinn_documentation.md';
-                this.loadGuideMarkdownContent(guideUrl); // Cargar la guía directamente
+                this.loadGuideMarkdownContent(guideUrl);
 
-                // Agregar el listener cuando el componente esté montado
+                this.currentSidebarSection = 'views';
+                const viewsUrl = 'views.html';
+                this.loadViewsContent(viewsUrl);
+
                 this.addBeforeUnloadListener();
             },
 
             beforeUnmount() {
-                // Eliminar el listener antes de que el componente sea destruido
                 this.removeBeforeUnloadListener();
             }
         })
