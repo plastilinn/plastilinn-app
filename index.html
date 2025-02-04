@@ -423,18 +423,17 @@
 
         <div id="modalViews"
             class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-auto w-full z-50 flex justify-center hidden">
-            <!-- Agregamos 'mt-10' para que la modal tenga un margen superior y no quede pegada al borde -->
             <div class="relative bg-white w-11/12 max-h-[90vh] p-5 shadow-lg rounded-md overflow-y-auto mt-10">
                 <div v-if="viewsContent">
                     <button class="btn m-2 btn-error" onclick="closeMyModal()">Close</button>
-                    <div v-html="viewsContent"></div>
+                    <!-- Aquí usamos finalProcessedViewsContent para que, si hideTagsOption es "hide", se eliminen los tags -->
+                    <div v-html="finalProcessedViewsContent"></div>
                 </div>
                 <div class="flex justify-end">
                     <button class="btn m-2 btn-error" onclick="closeMyModal()">Close</button>
                 </div>
             </div>
         </div>
-
 
         <script>
             // Funciones para abrir y cerrar la modal
@@ -504,6 +503,9 @@
                     isFullScreenEditorOpen: false, // Estado para controlar el modal del editor en pantalla completa
                     selectedPrompt: null,
                     selectedButton: null, // Para almacenar el botón seleccionado
+                    viewsContent: '',      // Se cargará, por ejemplo, desde views.html
+                    hideTagsOption: 'show', // "show" o "hide"
+                    showModalViews: false,  // Controla la visibilidad del modal
                 };
             },
             computed: {
@@ -616,9 +618,42 @@
                 // Crear una propiedad computada para obtener el título sin emojis
                 titleSanitized() {
                     return this.removeEmojis(this.block.title);
-                }
+                },
 
+                processedViewsContent() {
+                    if (!this.viewsContent) return '';
+                    // Aquí se pueden hacer otros reemplazos (por ejemplo, de placeholders)
+                    return this.viewsContent.replace(/{{([^}]+)}}/g, (match, rawSearchTerm) => {
+                        const searchTerm = rawSearchTerm.trim();
+                        const matchingLines = this.modelMarkdown
+                            .split(/\r?\n/)
+                            .filter(line => line.includes(searchTerm));
+                        if (matchingLines.length > 0) {
+                            const listItems = matchingLines.map(line => `<li>${line}</li>`).join('');
+                            return `<ul>${listItems}</ul>`;
+                        } else {
+                            return `<ul><li>No se encontró información para "${searchTerm}"</li></ul>`;
+                        }
+                    });
+                },
+
+                finalProcessedViewsContent() {
+                    let content = this.processedViewsContent;
+                    if (this.hideTagsOption === 'hide') {
+                        // Esta expresión regular elimina cualquier secuencia que inicie con "#" y continúe hasta el primer espacio (o fin de la palabra)
+                        content = content.replace(/#[^\s<]+/g, '');
+                        // Opcional: colapsar espacios múltiples y quitar espacios al inicio y al final
+                        content = content.replace(/\s{2,}/g, ' ').trim();
+
+                        // Si deseas eliminar un espacio extra entre un emoji y la siguiente palabra (por ejemplo, "🤔 Técnicos..." a "🤔Técnicos...")
+                        // podrías agregar un reemplazo adicional. Por ejemplo, si el emoji está en un rango específico:
+                        // content = content.replace(/([\uD800-\uDBFF][\uDC00-\uDFFF])\s+/, '$1');
+                        // Sin embargo, esta parte es opcional.
+                    }
+                    return content;
+                }
             },
+
             methods: {
 
                 processLicense() {

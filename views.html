@@ -63,15 +63,9 @@
 <article class="prose">
     <!-- Select para mostrar/ocultar etiquetas -->
     <div class="mb-4">
-        <label for="toggle-tags" class="font-bold mr-2">Show Tags:</label>
-        <select id="toggle-tags" class="p-2 border">
+        <select id="toggle-tags" v-model="hideTagsOption" class="p-2 border">
             <option value="show">Show Tags</option>
             <option value="hide">Hide Tags</option>
-        </select>
-        <label for="toggle-markers" class="font-bold mr-2">Show Markers:</label>
-        <select id="toggle-markers" class="p-2 border">
-            <option value="show">Show Markers</option>
-            <option value="hide">Hide Markers</option>
         </select>
     </div>
 </article>
