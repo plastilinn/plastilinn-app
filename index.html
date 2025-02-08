@@ -417,6 +417,37 @@
                     class="btn m2 btn-success">Save</button>
                 <button @click="closeFullScreenEditor()" class="btn m-2 btn-error">Close</button>
                 <div id="doc-editor-container"></div>
+                <!-- Mostrar botones dinámicos basados en el metamodelID del bloque -->
+                <div v-if="selectedBlockIndex !== null">
+                    <div v-for="prompt in getPromptsForMetamodelID(model[selectedBlockIndex].metamodelID)"
+                        :key="prompt.id">
+                        <div role="alert" class="alert">🤖 Artificial Intelligence (click to open AI toold and
+                            paste the prompt copied to your clipboard)
+                            <button class="btn m-2 btn-primary"
+                                @click="copyPromptToClipboard(prompt.prompt); openNewWindowWithURL(prompt.url); printMessage('Prompt copied. Paste it in the chatbot!!!')">
+                                <span class="material-symbols-outlined" translate="no">
+                                    content_copy
+                                </span>
+                                {{ prompt.caption }}
+                            </button>
+                        </div>
+                    </div>
+                </div> <!-- Mostrar botones dinámicos basados en el metamodelID del bloque -->
+                <div v-if="selectedBlockIndex !== null">
+                    <div v-for="prompt in getPromptsForMetamodelID(model[selectedBlockIndex].metamodelID)"
+                        :key="prompt.id">
+                        <div role="alert" class="alert">🤖 Artificial Intelligence (click to open AI toold and
+                            paste the prompt copied to your clipboard)
+                            <button class="btn m-2 btn-primary"
+                                @click="copyPromptToClipboard(prompt.prompt); openNewWindowWithURL(prompt.url); printMessage('Prompt copied. Paste it in the chatbot!!!')">
+                                <span class="material-symbols-outlined" translate="no">
+                                    content_copy
+                                </span>
+                                {{ prompt.caption }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
