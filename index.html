@@ -402,9 +402,108 @@
                         </button>
                         <div class="mt-2">
                             <div id="editor-container"></div>
+                            <div id="pnn-chat-container">
+                                <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+                                <script type="module">
+                                    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+                                    console.log("Iniciando n8n chat...");
+
+                                    createChat({
+                                        webhookUrl: 'https://n8n.lucascervera.com/webhook/63af52cf-54f7-4e29-a34c-d1b73a0067a1/chat',
+                                        webhookConfig: {
+                                            method: 'POST',
+                                            headers: {}
+                                        },
+                                        target: '#n8n-chat',
+                                        mode: 'window',
+                                        chatInputKey: 'chatInput',
+                                        chatSessionKey: 'sessionId',
+                                        metadata: {
+                                            pnn_block_id: 'username',
+                                            pnn_context: 'a guitar shop'
+                                        },
+                                        additionalData: {
+                                            metadata: {
+                                                pnn_block_id: 'username',
+                                                pnn_context: 'a guitar shop'
+                                            }
+                                        },
+                                        showWelcomeScreen: false,
+                                        defaultLanguage: 'en',
+                                        initialMessages: [
+                                            'Hi there! 👋',
+                                            'My name is Plastilinn. How can I assist you today?'
+                                        ],
+                                        i18n: {
+                                            en: {
+                                                title: 'Hi there! 👋',
+                                                subtitle: "Start a chat. We're here to help you 24/7.",
+                                                footer: '',
+                                                getStarted: 'New Conversation',
+                                                inputPlaceholder: 'Type your question..',
+                                            },
+                                        },
+                                    });
+
+                                    // Esperar 3 segundos a que el chat cargue completamente
+                                    setTimeout(() => {
+                                        console.log("Intentando enviar mensaje...");
+
+                                        // Buscar el textarea del chat
+                                        const inputField = document.querySelector('textarea');
+
+                                        if (inputField) {
+                                            console.log("Campo de entrada encontrado:", inputField);
+
+                                            // Insertar texto como si el usuario lo hubiera escrito
+                                            inputField.value = 'Hola mundo';
+                                            inputField.dispatchEvent(new Event('input', { bubbles: true }));
+
+                                            // Buscar el botón de enviar
+                                            const sendButton = document.querySelector('.chat-input-send-button');
+
+                                            if (sendButton) {
+                                                console.log("Botón de enviar encontrado, intentando hacer clic...");
+                                                sendButton.removeAttribute('disabled'); // Asegurar que no esté deshabilitado
+                                                sendButton.click(); // Simular clic en el botón de enviar
+                                                console.log("Mensaje enviado con éxito.");
+                                            } else {
+                                                console.error("No se encontró el botón de enviar.");
+                                            }
+                                        } else {
+                                            console.error("No se encontró el campo de entrada. Verifica si el chat se ha renderizado correctamente.");
+                                        }
+                                    }, 3000);
+                                </script>
+                            </div>
+
+
+                            bbb
+
+
+
+                            <!--
+
+                            <div v-if="selectedBlockIndex !== null">
+                                <div v-for="prompt in getPromptsForMetamodelID(model[selectedBlockIndex].metamodelID)"
+                                    :key="prompt.id">
+                                    <div role="alert" class="alert">🤖 Artificial Intelligence (click to open AI toold
+                                        and
+                                        paste the prompt copied to your clipboard)
+                                        <button class="btn m-2 btn-primary"
+                                            @click="copyPromptToClipboard(prompt.prompt); openNewWindowWithURL(prompt.url); printMessage('Prompt copied. Paste it in the chatbot!!!')">
+                                            <span class="material-symbols-outlined" translate="no">
+                                                content_copy
+                                            </span>
+                                            {{ prompt.caption }}
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        -->
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -417,37 +516,6 @@
                     class="btn m2 btn-success">Save</button>
                 <button @click="closeFullScreenEditor()" class="btn m-2 btn-error">Close</button>
                 <div id="doc-editor-container"></div>
-                <!-- Mostrar botones dinámicos basados en el metamodelID del bloque -->
-                <div v-if="selectedBlockIndex !== null">
-                    <div v-for="prompt in getPromptsForMetamodelID(model[selectedBlockIndex].metamodelID)"
-                        :key="prompt.id">
-                        <div role="alert" class="alert">🤖 Artificial Intelligence (click to open AI toold and
-                            paste the prompt copied to your clipboard)
-                            <button class="btn m-2 btn-primary"
-                                @click="copyPromptToClipboard(prompt.prompt); openNewWindowWithURL(prompt.url); printMessage('Prompt copied. Paste it in the chatbot!!!')">
-                                <span class="material-symbols-outlined" translate="no">
-                                    content_copy
-                                </span>
-                                {{ prompt.caption }}
-                            </button>
-                        </div>
-                    </div>
-                </div> <!-- Mostrar botones dinámicos basados en el metamodelID del bloque -->
-                <div v-if="selectedBlockIndex !== null">
-                    <div v-for="prompt in getPromptsForMetamodelID(model[selectedBlockIndex].metamodelID)"
-                        :key="prompt.id">
-                        <div role="alert" class="alert">🤖 Artificial Intelligence (click to open AI toold and
-                            paste the prompt copied to your clipboard)
-                            <button class="btn m-2 btn-primary"
-                                @click="copyPromptToClipboard(prompt.prompt); openNewWindowWithURL(prompt.url); printMessage('Prompt copied. Paste it in the chatbot!!!')">
-                                <span class="material-symbols-outlined" translate="no">
-                                    content_copy
-                                </span>
-                                {{ prompt.caption }}
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -1917,6 +1985,19 @@
                 this.loadViewsContent(viewsUrl);
 
                 this.addBeforeUnloadListener();
+            },
+
+            setup() {
+                Vue.onMounted(() => {
+                    const script = document.createElement("script");
+                    script.src = "https://cdn.jsdelivr.net/npm/@n8n/chat";
+                    script.onload = function () {
+                        createChat({
+                            webhookUrl: "https://n8n.lucascervera.com/webhook/f406671e-c954-4691-b39a-66c90aa2f103/chat"
+                        });
+                    };
+                    document.body.appendChild(script);
+                });
             },
 
             beforeUnmount() {
